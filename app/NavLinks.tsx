@@ -1,5 +1,12 @@
-import React from "react";
+import { categories } from "../constants";
+import NavLink from "./NavLink";
 
 export default function NavLinks() {
-  return <div>NavLinks</div>;
+  return (
+    <div>
+      {categories.map((category) => (
+        <NavLink key={category} category={category} isActive={true} />
+      ))}
+    </div>
+  );
 }
